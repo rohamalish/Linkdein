@@ -56,8 +56,31 @@ header{
    margin-right: 10px;
 }
 
-
-
+/*main*/
+#main{
+   height: 100vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+#body-main{
+   display: flex;
+   width: 70%;
+   border: 1px solid blue;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+section{
+   display: flex;
+   width: 70%;
+   border: 2px solid blueviolet;
+}
+aside{
+   display: flex;
+   width: 28%;
+   border: 2px solid red;
+}
 
 
 
@@ -125,6 +148,11 @@ header{
       width: 70%;
    }
    .icons-header{
+      width: 50%;
+   }
+ }
+ @media only screen and (min-width: 1440px) {
+   #body-main{
       width: 50%;
    }
  }
