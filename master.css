@@ -1,0 +1,149 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+   background-color: #c4c4c4;
+}
+
+header{
+   height: 60px;
+   background-color: aliceblue;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+.main-header{
+   height: 100%;
+   width: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   font-size: 25px;
+}
+.search-header{
+   height: 100%;
+   width: 70%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   
+}
+.icons-header{
+   height: 100%;
+   width: 30%;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   color: gray;
+}
+.icons-header>span:hover{
+   color: black;
+}
+.search-header>input{
+   padding: 5px;
+   border-radius: 10px;
+   border-color: transparent;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: #c4c4c4;
+}
+.search-header>span{
+   color: rgb(36, 36, 225);
+   margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Fonts-icon*/
+@font-face {
+   font-family: 'icomoon';
+   src:  url('./fonts/icomoon.eot?b12z9g');
+   src:  url('./fonts/icomoon.eot?b12z9g#iefix') format('embedded-opentype'),
+     url('./fonts/icomoon.ttf?b12z9g') format('truetype'),
+     url('./fonts/icomoon.woff?b12z9g') format('woff'),
+     url('./fonts/icomoon.svg?b12z9g#icomoon') format('svg');
+   font-weight: normal;
+   font-style: normal;
+   font-display: block;
+ }
+ 
+ [class^="icon-"], [class*=" icon-"] {
+   /* use !important to prevent issues with browser extensions that change fonts */
+   font-family: 'icomoon' !important;
+   speak: never;
+   font-style: normal;
+   font-weight: normal;
+   font-variant: normal;
+   text-transform: none;
+   line-height: 1;
+ 
+   /* Better Font Rendering =========== */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+ 
+ .icon-home3:before {
+   content: "\e902";
+ }
+ .icon-bell:before {
+   content: "\e951";
+ }
+ .icon-bubbles:before {
+   content: "\e96c";
+ }
+ .icon-users:before {
+   content: "\e972";
+ }
+ .icon-briefcase:before {
+   content: "\e9ae";
+ }
+ .icon-notification:before {
+   content: "\ea08";
+ }
+ .icon-linkedin:before {
+   content: "\eac9";
+ }
+
+ /*media screens*/
+ @media only screen and (max-width: 1142px) {
+   .main-header{
+      width: 70%;
+   }
+   .icons-header{
+      width: 50%;
+   }
+ }
+ @media only screen and (max-width: 741px) {
+   .main-header{
+      width: 100%;
+      padding: 10px;
+   }
+   .icons-header{
+      width: 50%;
+      font-size: 20px;
+   }
+ }
+ @media only screen and (max-width: 320px) {
+   .search-header>input{
+      display: none;
+   }
+   .icons-header{
+      width: 70%;
+      font-size: 25px;
+   }
+ }
