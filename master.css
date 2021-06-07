@@ -431,6 +431,11 @@ footer{
       width: 50%;
       font-size: 20px;
    }
+     .box-people>button{
+      
+      width: 65px;
+      
+   }
    
  }
  @media only screen and (max-width: 426px) {
