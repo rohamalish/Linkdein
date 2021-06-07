@@ -72,7 +72,6 @@ header{
 #body-main{
    display: flex;
    width: 90%;
-   border: 1px solid blue;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -82,13 +81,13 @@ section{
    display: flex;
    flex-direction: column;
    width: 70%;
-   border: 2px solid blueviolet;
+   
    border-radius: 10px;
 }
 aside{
    display: flex;
    width: 28%;
-   border: 2px solid red;
+   
    border-radius: 10px;
 }
 
@@ -187,7 +186,7 @@ width: 85%;
 /*part3-sction-started*/
 .dashboard{
    height: 450px;
-   background-color: rgb(227, 248, 255);
+   background-color: rgb(236, 250, 255);
    display: flex;
    flex-direction: column;
    justify-content: space-around;
@@ -211,6 +210,9 @@ width: 85%;
    height: 100%;
    padding: 10px;
    border-right: 1px solid gray; 
+}
+.child2{
+   border-right: none;
 }
 .dashboard-box-tow{
    background-color: white;
@@ -260,13 +262,14 @@ width: 85%;
 aside{
    display: flex;
    flex-direction: column;
+   padding: 5px;
 }
 .aside-part-one{
    display: flex;
    height: 60px;
    justify-content: space-between;
    align-items: stretch;
-   
+
    flex-direction: column;
    background-color: white;
    padding: 5px;
@@ -274,7 +277,65 @@ aside{
 }
 /*aside part 1 ended*/
 
+
+/*aside people start*/
+.aside-people{
+   height: 700px;
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   border-radius: 5px;
+   margin-top: 10%;
+   padding: 5px;
+}
+.people-info{
+   display: flex;
+   height: 80px;
+   padding: 2px;
+   
+}
+.people-info>img{
+   height: 50px;
+   width: 50px;
+   border-radius: 50%;
+}
+.box-people{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   flex-grow: 1;
+}
+.box-people>button{
+   border-radius: 10px;
+   width: 100px;
+   background-color: white;
+}
+.box-people>button:hover{
+   background-color: cadetblue;
+   color: aliceblue;
+   cursor: pointer;
+}
+/*aside people ended*/
+
 /*aside ended*/
+
+/*footer started*/
+footer{
+   display: flex;
+   height:200px ;
+   justify-content: space-around;
+   padding: 10px;
+   border-top: 1px solid gray;
+}
+.part{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+  
+}
+/*footer ended*/
+
 
 /*Fonts-icon*/
 @font-face {
@@ -333,15 +394,32 @@ aside{
 
  /*media screens*/
  
- @media only screen and (min-width: 1140px) {
+ @media only screen and (max-width: 2000px) {
    #body-main{
-      width: 70%;
+      width: 65%;
+   }
+   .main-header{
+      width: 75%;
+      
+   }
+   .box-people{
+      margin-left: 10%;
    }
  }
  @media only screen and (max-width: 1024px) {
    .main-header{
       width: 90%;
       
+   }
+   .aside-part-one{
+      font-size: small;
+   }
+   .people-info{
+      font-size: small;
+      
+   }
+    .box-people{
+      margin-left: 0;
    }
  }
  @media only screen and (max-width: 741px) {
@@ -353,6 +431,7 @@ aside{
       width: 50%;
       font-size: 20px;
    }
+   
  }
  @media only screen and (max-width: 426px) {
    *{
