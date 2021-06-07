@@ -2,6 +2,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
 }
 body{
    background-color: #ebebebf5;
@@ -19,11 +20,12 @@ header{
 }
 .main-header{
    height: 100%;
-   width: 50%;
+   width: 70%;
    display: flex;
    align-items: center;
    justify-content: space-around;
    font-size: 25px;
+   
 }
 .search-header{
    height: 100%;
@@ -61,7 +63,7 @@ header{
 
 /*main*/
 #main{
-   height: 100vh;
+   height: auto;
    display: flex;
    flex-direction: row;
    justify-content: space-around;
@@ -69,7 +71,7 @@ header{
 }
 #body-main{
    display: flex;
-   width: 70%;
+   width: 90%;
    border: 1px solid blue;
    display: flex;
    flex-direction: row;
@@ -78,6 +80,7 @@ header{
 }
 section{
    display: flex;
+   flex-direction: column;
    width: 70%;
    border: 2px solid blueviolet;
    border-radius: 10px;
@@ -121,7 +124,7 @@ aside{
    border: 2px solid white;
 }
 .profile-details{
-   font-family: Arial, Helvetica, sans-serif;
+   
    display: flex;
    height: 50%;
    flex-direction: column;
@@ -130,21 +133,25 @@ aside{
 }
 .profile-buttons{
    display: flex;
-   height: 30px;
+  align-items: center;
+   height: 35px;
 
 }
 .profile-buttons>button{
+   height: 28px;
    border-radius: 50px;
    padding: 5px;
    margin-right: 10px;
    background-color: white;
    color: rgb(31, 31, 187);
    border: 1px solid black;
+   font-size: 15px;
 }
 .profile-buttons>button:hover{
    background-color: rgb(197, 197, 197);
    cursor: pointer;
    border: 2px solid black;
+   color: black;
 }
 
 .box-profile{
@@ -153,18 +160,121 @@ aside{
    justify-content: space-around;
    flex-direction: column;
    padding: 8px;
-   width: 220px;
    background-color: rgb(197, 194, 194);
    border-radius: 10px;
    
 }
 
 /*part1-section-ended*/
+/*part2-sction-started*/
+.box-loading{
+   height: 100px;
+   background-color: white;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+   border-radius: 20px;
+   margin-top: 5%;
+   padding: 10px;
+}
+.box-loading>progress{
+background-color: rgb(0, 174, 255);
+font-size: larger;
+width: 85%;
+}
+/*part2-sction-ended*/
+
+/*part3-sction-started*/
+.dashboard{
+   height: 450px;
+   background-color: rgb(227, 248, 255);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   border-radius: 20px;
+   margin-top: 5%;
+   padding: 10px;
+}
+.dashboard-box-one{
+   background-color: white;
+   border-radius: 10px;
+   display: flex;
+   justify-content: space-between;
+   height: 70px;
+   align-items: center;
+  
+}
+.child{
+   display: flex;
+   width: 33.3333%;
+   flex-direction: column;
+   height: 100%;
+   padding: 10px;
+   border-right: 1px solid gray; 
+}
+.dashboard-box-tow{
+   background-color: white;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   height: 180px;
+   padding: 10px;
+}
+.child-box-two{
+   display: flex;
+   height: 33.33%;
+   
+}
+.icon-child{
+   display: flex;
+   align-items: center;
+   flex-grow: 1;
+   justify-content: center;
+}
+.text-child{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   flex-grow: 8;
+   border-bottom: 1px solid rgb(221, 220, 220);
+}
+/*part3-sction-ended*/
+
+/* section part 4 started*/
+.education{
+   height: 300px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   border-radius: 20px;
+   margin-top: 5%;
+   padding: 10px;
+}
+/* section part 4 endeded*/
+
+/* section endeded*/
 
 
+/*aside begin*/
+/*aside part 1 begin*/
+aside{
+   display: flex;
+   flex-direction: column;
+}
+.aside-part-one{
+   display: flex;
+   height: 60px;
+   justify-content: space-between;
+   align-items: stretch;
+   
+   flex-direction: column;
+   background-color: white;
+   padding: 5px;
+   border-radius: 5px;
+}
+/*aside part 1 ended*/
 
-
-
+/*aside ended*/
 
 /*Fonts-icon*/
 @font-face {
@@ -222,17 +332,16 @@ aside{
 
 
  /*media screens*/
- @media only screen and (max-width: 1142px) {
-   .main-header{
-      width: 70%;
-   }
-   .icons-header{
-      width: 50%;
-   }
- }
+ 
  @media only screen and (min-width: 1140px) {
    #body-main{
-      width: 50%;
+      width: 70%;
+   }
+ }
+ @media only screen and (max-width: 1024px) {
+   .main-header{
+      width: 90%;
+      
    }
  }
  @media only screen and (max-width: 741px) {
@@ -245,6 +354,18 @@ aside{
       font-size: 20px;
    }
  }
+ @media only screen and (max-width: 426px) {
+   *{
+      font-size: small;
+   }
+   aside{
+      display: none;
+   }
+   section{
+      width: 100%;
+   }
+   
+ }
  @media only screen and (max-width: 320px) {
    .search-header>input{
       display: none;
@@ -253,4 +374,9 @@ aside{
       width: 70%;
       font-size: 25px;
    }
+   
+   .profile-buttons>button{
+      font-size: 10px;
+   }
  }
+
